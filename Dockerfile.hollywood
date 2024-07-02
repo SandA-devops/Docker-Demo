@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get DEBIAN_FRONTEND=noninteractive install -y \
 	byobu hollywood locate mlocate \
 	&& rm -rf /var/lib/apt/lists/* && updatedb
 
